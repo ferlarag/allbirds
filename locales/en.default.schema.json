@@ -875,6 +875,9 @@
         "menu": {
           "label": "Menu"
         },
+        "second_menu": {
+          "label": "Second Menu"
+        },
         "menu_type_desktop": {
           "label": "Desktop menu type",
           "info": "Menu type is automatically optimized for mobile.",

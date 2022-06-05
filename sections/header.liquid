@@ -115,7 +115,7 @@
                       <li>
                         {%- if link.links != blank -%}
                           <details id="Details-menu-drawer-menu-item-{{ forloop.index }}">
-                            <summary class="menu-drawer__menu-item list-menu__item link link--text focus-inset{% if link.child_active %} menu-drawer__menu-item--active{% endif %}">
+                            <summary class="menu-drawer__menu-item list-menu__item link link--text focus-inset">
                               {{ link.title | escape }}
                               {% render 'icon-arrow' %}
                               {% render 'icon-caret' %}
@@ -130,7 +130,7 @@
                                   {%- for childlink in link.links -%}
                                     <li>
                                       {%- if childlink.links == blank -%}
-                                        <a href="{{ childlink.url }}" class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if childlink.current %} menu-drawer__menu-item--active{% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
+                                        <a href="{{ childlink.url }}" class="menu-drawer__menu-item link link--text list-menu__item focus-inset}"{% if childlink.current %} aria-current="page"{% endif %}>
                                           {{ childlink.title | escape }}
                                         </a>
                                       {%- else -%}
@@ -148,7 +148,7 @@
                                             <ul class="menu-drawer__menu list-menu" role="list" tabindex="-1">
                                               {%- for grandchildlink in childlink.links -%}
                                                 <li>
-                                                  <a href="{{ grandchildlink.url }}" class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if grandchildlink.current %} menu-drawer__menu-item--active{% endif %}"{% if grandchildlink.current %} aria-current="page"{% endif %}>
+                                                  <a href="{{ grandchildlink.url }}" class="menu-drawer__menu-item link link--text list-menu__item focus-inset"{% if grandchildlink.current %} aria-current="page"{% endif %}>
                                                     {{ grandchildlink.title | escape }}
                                                   </a>
                                                 </li>
@@ -177,7 +177,7 @@
                       <li>
                         {%- if link.links != blank -%}
                           <details id="Details-menu-drawer-menu-item-{{ forloop.index }}">
-                            <summary class="menu-drawer__menu-item list-menu__item link link--text focus-inset{% if link.child_active %} menu-drawer__menu-item--active{% endif %}">
+                            <summary class="menu-drawer__menu-item list-menu__item link link--text focus-inset">
                               {{ link.title | escape | upcase}}
                               {% render 'icon-arrow' %}
                               {% render 'icon-caret' %}
@@ -192,7 +192,7 @@
                                   {%- for childlink in link.links -%}
                                     <li>
                                       {%- if childlink.links == blank -%}
-                                        <a href="{{ childlink.url }}" class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if childlink.current %} menu-drawer__menu-item--active{% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
+                                        <a href="{{ childlink.url }}" class="menu-drawer__menu-item link link--text list-menu__item focus-inset"{% if childlink.current %} aria-current="page"{% endif %}>
                                           {{ childlink.title | escape }}
                                         </a>
                                       {%- else -%}
@@ -210,7 +210,7 @@
                                             <ul class="menu-drawer__menu list-menu" role="list" tabindex="-1">
                                               {%- for grandchildlink in childlink.links -%}
                                                 <li>
-                                                  <a href="{{ grandchildlink.url }}" class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if grandchildlink.current %} menu-drawer__menu-item--active{% endif %}"{% if grandchildlink.current %} aria-current="page"{% endif %}>
+                                                  <a href="{{ grandchildlink.url }}" class="menu-drawer__menu-item link link--text list-menu__item focus-inset"{% if grandchildlink.current %} aria-current="page"{% endif %}>
                                                     {{ grandchildlink.title | escape }}
                                                   </a>
                                                 </li>
@@ -226,7 +226,7 @@
                             </div>
                           </details>
                         {%- else -%}
-                          <a href="{{ link.url }}" class="menu-drawer__menu-item list-menu__item link link--text focus-inset{% if link.current %} menu-drawer__menu-item--active{% endif %}"{% if link.current %} aria-current="page"{% endif %}>
+                          <a href="{{ link.url }}" class="menu-drawer__menu-item list-menu__item link link--text focus-inset"{% if link.current %} aria-current="page"{% endif %}>
                             {{ link.title | escape | upcase }}
                           </a>
                         {%- endif -%}
@@ -436,14 +436,14 @@
                   <header-menu>
                     <details id="Details-HeaderMenu-{{ forloop.index }}">
                       <summary class="header__menu-item list-menu__item link focus-inset">
-                        <span {%- if link.child_active %} class="header__active-menu-item"{% endif %}>{{ link.title | escape }}</span>
+                        <span>{{ link.title | escape }}</span>
                         {% render 'icon-caret' %}
                       </summary>
                       <ul id="HeaderMenu-MenuList-{{ forloop.index }}" class="header__submenu list-menu list-menu--disclosure gradient caption-large motion-reduce global-settings-popup" role="list" tabindex="-1">
                         {%- for childlink in link.links -%}
                           <li>
                             {%- if childlink.links == blank -%}
-                              <a href="{{ childlink.url }}" class="header__menu-item list-menu__item link link--text focus-inset caption-large{% if childlink.current %} list-menu__item--active{% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
+                              <a href="{{ childlink.url }}" class="header__menu-item list-menu__item link link--text focus-inset caption-large"{% if childlink.current %} aria-current="page"{% endif %}>
                                 {{ childlink.title | escape }}
                               </a>
                             {%- else -%}
@@ -470,7 +470,7 @@
                   </header-menu>
                 {%- else -%}
                   <a href="{{ link.url }}" class="header__menu-item header__menu-item list-menu__item link link--text focus-inset"{% if link.current %} aria-current="page"{% endif %}>
-                    <span {%- if link.current %} class="header__active-menu-item"{% endif %}>{{ link.title | escape | upcase}}</span>
+                    <span>{{ link.title | escape | upcase}}</span>
                   </a>
                 {%- endif -%}
               </li>
@@ -486,7 +486,7 @@
                   <header-menu>
                     <details id="Details-HeaderMenu-{{ forloop.index }}" class="mega-menu">
                       <summary class="header__menu-item list-menu__item link focus-inset">
-                        <span {%- if link.child_active %} class="header__active-menu-item"{% endif %}>{{ link.title | escape }}</span>
+                        <span>{{ link.title | escape }}</span>
                         {% render 'icon-caret' %}
                       </summary>
                       <div id="MegaMenu-Content-{{ forloop.index }}" class="mega-menu__content gradient motion-reduce global-settings-popup" tabindex="-1">
@@ -515,7 +515,7 @@
                   </header-menu>
                 {%- else -%}
                   <a href="{{ link.url }}" class="header__menu-item header__menu-item list-menu__item link link--text focus-inset"{% if link.current %} aria-current="page"{% endif %}>
-                    <span {%- if link.current %} class="header__active-menu-item"{% endif %}>{{ link.title | escape | upcase}}</span>
+                    <span>{{ link.title | escape | upcase}}</span>
                   </a>
                 {%- endif -%}
               </li>
@@ -536,7 +536,7 @@
                   <header-menu>
                     <details id="Details-HeaderMenu-{{ forloop.index }}">
                       <summary class="header__menu-item list-menu__item link focus-inset">
-                        <span {%- if link.child_active %} class="header__active-menu-item"{% endif %}>{{ link.title | escape }}</span>
+                        <span>{{ link.title | escape }}</span>
                         {% render 'icon-caret' %}
                       </summary>
                       <ul id="HeaderMenu-MenuList-{{ forloop.index }}" class="header__submenu list-menu list-menu--disclosure gradient caption-large motion-reduce global-settings-popup" role="list" tabindex="-1">
@@ -570,7 +570,7 @@
                   </header-menu>
                 {%- else -%}
                   <a href="{{ link.url }}" class="header__menu-item header__menu-item list-menu__item link link--text focus-inset"{% if link.current %} aria-current="page"{% endif %}>
-                    <span {%- if link.current %} class="header__active-menu-item"{% endif %}>{{ link.title | escape | upcase}}</span>
+                    <span>{{ link.title | escape | upcase}}</span>
                   </a>
                 {%- endif -%}
               </li>
@@ -586,7 +586,7 @@
                   <header-menu>
                     <details id="Details-HeaderMenu-{{ forloop.index }}" class="mega-menu">
                       <summary class="header__menu-item list-menu__item link focus-inset">
-                        <span {%- if link.child_active %} class="header__active-menu-item"{% endif %}>{{ link.title | escape }}</span>
+                        <span>{{ link.title | escape }}</span>
                         {% render 'icon-caret' %}
                       </summary>
                       <div id="MegaMenu-Content-{{ forloop.index }}" class="mega-menu__content gradient motion-reduce global-settings-popup" tabindex="-1">
@@ -615,7 +615,7 @@
                   </header-menu>
                 {%- else -%}
                   <a href="{{ link.url }}" class="header__menu-item header__menu-item list-menu__item link link--text focus-inset"{% if link.current %} aria-current="page"{% endif %}>
-                    <span {%- if link.current %} class="header__active-menu-item"{% endif %}>{{ link.title | escape | upcase}}</span>
+                    <span>{{ link.title | escape | upcase}}</span>
                   </a>
                 {%- endif -%}
               </li>

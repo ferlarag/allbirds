@@ -463,10 +463,10 @@
       {%- endif -%}
     {%- endif -%}
 
-    <!--Second Menu starts here -->
+    <!--Second Menu starts here 
     {%- if section.settings.second_menu != blank -%}
       {%- if section.settings.second_menu_type_desktop == 'dropdown' -%}
-        <nav class="header__inline-second-menu">
+        <div class="header__inline-second-menu">
           <ul class="list-menu list-menu--inline" role="list">
             {%- for link in section.settings.second_menu.links -%}
               <li>
@@ -514,9 +514,9 @@
               </li>
             {%- endfor -%}
           </ul>
-        </nav>
+        </div>
       {%- else -%}
-        <nav class="header__inline-second-menu">
+        <div class="header__inline-second-menu">
           <ul class="list-menu list-menu--inline" role="list">
             {%- for link in section.settings.second_menu.links -%}
               <li>
@@ -559,11 +559,11 @@
               </li>
             {%- endfor -%}
           </ul>
-        </nav>
+        </div>
       {%- endif -%}
     {%- endif -%}
   {%- endif -%}
-
+-->
     <div class="header__icons">
       <details-modal class="header__search">
         <details>

@@ -465,7 +465,7 @@
 
     <!--Second Menu starts here -->
     {%- if section.settings.second_menu != blank -%}
-      {%- if section.settings.menu_type_desktop == 'dropdown' -%}
+      {%- if section.settings.second_menu_type_desktop == 'dropdown' -%}
         <nav class="header__inline-second-menu">
           <ul class="list-menu list-menu--inline" role="list">
             {%- for link in section.settings.second_menu.links -%}

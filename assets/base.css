@@ -2241,7 +2241,7 @@ input[type='checkbox'] {
       'navigation navigation navigation';
   }
 
-  .header:not(.header--middle-left) .header__inline-menu {
+  .header:not(.header--middle-left) .header__inline-menu .header__inline-second-menu {
     margin-top: 1.05rem;
   }
 }
@@ -2556,13 +2556,13 @@ details[open] > .header__submenu {
   display: none;
 }
 
-.header--top-center .header__inline-menu,
+.header--top-center .header__inline-menu .header__inline-second-menu,
 .header--top-center .header__heading-link {
   margin-left: 0;
 }
 
 @media screen and (min-width: 990px) {
-  .header__inline-menu {
+  .header__inline-menu, .header__inline-second-menu {
     display: block;
   }
 

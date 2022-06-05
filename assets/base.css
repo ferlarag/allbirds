@@ -2230,8 +2230,8 @@ input[type='checkbox'] {
   }
 
   .header--middle-left {
-    grid-template-areas: 'heading navigation icons';
-    grid-template-columns: auto auto 1fr;
+    grid-template-areas: 'navigation heading second-navigation icons';
+    grid-template-columns: 1fr auto 1fr auto;
     column-gap: 2rem;
   }
 
@@ -2547,6 +2547,12 @@ details[open] > .header__submenu {
 .header__inline-menu {
   margin-left: -1.2rem;
   grid-area: navigation;
+  display: none;
+}
+
+.header__inline-second-menu {
+  margin-left: -1.2rem;
+  grid-area: second-navigation;
   display: none;
 }
 

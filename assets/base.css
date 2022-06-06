@@ -2207,15 +2207,15 @@ input[type='checkbox'] {
   grid-template-areas: 'left-icon heading icons';
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
   justify-items: center;
 }
 
 @media screen and (min-width: 990px) {
   .header {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
   }
 
   .header--has-menu:not(.header--middle-left) {
@@ -2283,7 +2283,7 @@ input[type='checkbox'] {
 
 .header__heading-logo {
   height: auto;
-  width: 100%;
+  width: 120px;
 }
 
 @media screen and (max-width: 989px) {

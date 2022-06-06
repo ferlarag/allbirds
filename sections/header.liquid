@@ -407,7 +407,8 @@
     {%- if request.page_type == 'index' -%}
       <h1 class="header__heading">
     {%- endif -%}
-        <a href="{{ routes.root_url }}" class="header__heading-link link link--text focus-inset">
+    <!--
+      <a href="{{ routes.root_url }}" class="header__heading-link link link--text focus-inset">
           {%- if section.settings.logo != blank -%}
             {%- assign image_size_2x = section.settings.logo_width | times: 2 | at_most: 5760 -%}
             <img srcset="{{ section.settings.logo | image_url: width: section.settings.logo_width }} 1x, {{ section.settings.logo | image_url: width: image_size_2x }} 2x"
@@ -422,6 +423,9 @@
             <span class="h2">{{ shop.name }}</span>
           {%- endif -%}
         </a>
+    -->
+    <img class="header__heading-logo" src="/assets/allbirds-logo.svg" alt="logo">
+        
     {%- if request.page_type == 'index' -%}
       </h1>
     {%- endif -%}

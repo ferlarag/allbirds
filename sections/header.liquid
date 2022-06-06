@@ -115,7 +115,7 @@
                       <li>
                         {%- if link.links != blank -%}
                           <details id="Details-menu-drawer-menu-item-{{ forloop.index }}">
-                            <summary class="menu-drawer__menu-item list-menu__item link link--text focus-inset">
+                            <summary class="menu-drawer__menu-item list-menu__item link link--text focus-inset h2">
                               {{ link.title | escape }}
                               {% render 'icon-arrow' %}
                               {% render 'icon-caret' %}
@@ -164,7 +164,7 @@
                             </div>
                           </details>
                         {%- else -%}
-                          <a href="{{ link.url }}" class="menu-drawer__menu-item list-menu__item link link--text focus-inset{% if link.current %} menu-drawer__menu-item--active{% endif %}"{% if link.current %} aria-current="page"{% endif %}>
+                          <a href="{{ link.url }}" class="menu-drawer__menu-item list-menu__item link link--text focus-inset h2{% if link.current %} menu-drawer__menu-item--active{% endif %}"{% if link.current %} aria-current="page"{% endif %}>
                             {{ link.title | escape | upcase}}
                           </a>
                         {%- endif -%}
@@ -177,7 +177,7 @@
                       <li>
                         {%- if link.links != blank -%}
                           <details id="Details-menu-drawer-menu-item-{{ forloop.index }}">
-                            <summary class="menu-drawer__menu-item list-menu__item link link--text focus-inset">
+                            <summary class="menu-drawer__menu-item list-menu__item link link--text focus-inset h2">
                               {{ link.title | escape | upcase}}
                               {% render 'icon-arrow' %}
                               {% render 'icon-caret' %}
@@ -226,7 +226,7 @@
                             </div>
                           </details>
                         {%- else -%}
-                          <a href="{{ link.url }}" class="menu-drawer__menu-item list-menu__item link link--text focus-inset"{% if link.current %} aria-current="page"{% endif %}>
+                          <a href="{{ link.url }}" class="menu-drawer__menu-item list-menu__item link link--text focus-inset h2"{% if link.current %} aria-current="page"{% endif %}>
                             {{ link.title | escape | upcase }}
                           </a>
                         {%- endif -%}
@@ -429,7 +429,7 @@
     {%- if section.settings.menu != blank -%}
       {%- if section.settings.menu_type_desktop == 'dropdown' -%}
         <nav class="header__inline-menu">
-          <ul class="list-menu list-menu--inline" role="list">
+          <ul class="list-menu list-menu--inline h2" role="list">
             {%- for link in section.settings.menu.links -%}
               <li>
                 {%- if link.links != blank -%}
@@ -479,7 +479,7 @@
         </nav>
       {%- else -%}
         <nav class="header__inline-menu">
-          <ul class="list-menu list-menu--inline" role="list">
+          <ul class="list-menu list-menu--inline h2" role="list">
             {%- for link in section.settings.menu.links -%}
               <li>
                 {%- if link.links != blank -%}
@@ -529,7 +529,7 @@
     {%- if section.settings.second_menu != blank -%}
       {%- if section.settings.menu_type_desktop == 'dropdown' -%}
         <nav class="header__inline-second-menu">
-          <ul class="list-menu list-menu--inline" role="list">
+          <ul class="list-menu list-menu--inline h2" role="list">
             {%- for link in section.settings.second_menu.links -%}
               <li>
                 {%- if link.links != blank -%}
@@ -579,7 +579,7 @@
         </nav>
       {%- else -%}
         <nav class="header__inline-second-menu">
-          <ul class="list-menu list-menu--inline" role="list">
+          <ul class="list-menu list-menu--inline h2" role="list">
             {%- for link in section.settings.second_menu.links -%}
               <li>
                 {%- if link.links != blank -%}

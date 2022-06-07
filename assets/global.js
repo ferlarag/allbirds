@@ -761,12 +761,29 @@ class VariantSelects extends HTMLElement {
       this.setUnavailable();
     } else {
       this.updateMedia();
+      this.filterMedia();
       this.updateURL();
       this.updateVariantInput();
       this.renderProductInfo();
       this.updateShareUrl();
     }
   }
+
+  filterMedia(){
+    $('[thumbnail-color]').hide();
+    
+    var selected_variant = this.currentVariant.featured_media.alt;
+    
+    var selected_attribute = '[thumbnail-color="' + selected_variant + '"]';
+    
+    if (selected_variant == selected_variant) {
+      
+      $(selected_attribute).show();
+
+    }
+
+  } 
+    
 
   updateOptions() {
     this.options = Array.from(this.querySelectorAll('select'), (select) => select.value);
